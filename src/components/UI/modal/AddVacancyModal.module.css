@@ -1,0 +1,24 @@
+.addVacancy {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: None;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.addVacancyContent {
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    min-width: 500px;
+    color: #005E8B;
+    text-align: left;
+}
+
+.addVacancy.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
