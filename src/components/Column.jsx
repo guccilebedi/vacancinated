@@ -2,16 +2,22 @@ import React, {useState} from 'react';
 import Vacancy from "./Vacancy";
 import AddVacancyModal from "./UI/modal/AddVacancyModal";
 import AddVacancyForm from "./AddVacancyForm";
+import PlusButton from "./UI/button/PlusButton";
 
 const Column = ({column, vacancies, createVacancy}) => {
     const [modal, setModal] = useState(false);
 
     return (
         <div className="column">
-            <h1>{column.name}</h1>
-            <button onClick={() => setModal(true)}>+</button>
-            <AddVacancyModal visible={modal} setVisible={setModal}><AddVacancyForm
-                create={createVacancy}/></AddVacancyModal>
+            <div className="columnTopContent">
+                <PlusButton onClick={() => console.log("1")}>...</PlusButton>
+                <div className="columnName">
+                    {column.name}
+                </div>
+                <PlusButton onClick={() => setModal(true)}>+</PlusButton>
+                <AddVacancyModal visible={modal} setVisible={setModal}><AddVacancyForm
+                    create={createVacancy}/></AddVacancyModal>
+            </div>
             <div className="columnContent">
                 <div>
                     {vacancies.map(vacancy => {

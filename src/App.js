@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import './styles/App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import Board from "./components/Board";
-import PlusButton from "./components/UI/button/PlusButton";
 import ButtonsPane from "./components/ButtonsPane";
-
+import PlusButton from "./components/UI/button/PlusButton";
+import ForwardButton from "./components/UI/button/ForwardButton";
 
 function App() {
     const [vacancies, setVacancies] = useState([
